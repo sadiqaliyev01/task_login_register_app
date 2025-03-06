@@ -15,17 +15,18 @@ class LoginSignInButton extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.appBlue,
-              foregroundColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              )),
+            backgroundColor: AppColors.appBlue,
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
           child: Text(
             "Sign In",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-                color: AppColors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: AppColors.white,
             ),
           ),
         ),

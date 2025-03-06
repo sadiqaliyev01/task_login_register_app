@@ -23,37 +23,39 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return const SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Center(
-                child: RegisterScreenTitle(),
-              ),
-              SizedBox(height: 20),
-              RegisterScreenSubtitle(),
-              SizedBox(height: 50),
-              RegisterEmailTextForm(),
-              SizedBox(height: 40),
-              RegisterPasswordTextForm(text: 'Password'),
-              SizedBox(height: 40),
-              RegisterPasswordTextForm(text: 'Confirm Password'),
-              SizedBox(height: 50),
-              RegisterSignUpButton(),
-              SizedBox(height: 30),
-              AlreadyHaveAnAccount(),
-              SizedBox(height: 70),
-              RegisterOrContinueWith(),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FacebookIconButton(),
-                  SizedBox(width: 10),
-                  AppleIconButton(),
-                  SizedBox(width: 10),
-                  AdobeIconButton(),
-                ],
-              ),
-            ],
+          child: Expanded(
+            child: Column(
+              children: [
+                Center(
+                  child: RegisterScreenTitle(),
+                ),
+                SizedBox(height: 20),
+                RegisterScreenSubtitle(),
+                SizedBox(height: 50),
+                RegisterEmailTextForm(),
+                SizedBox(height: 40),
+                RegisterPasswordTextForm(text: 'Password'),
+                SizedBox(height: 40),
+                RegisterPasswordTextForm(text: 'Confirm Password'),
+                SizedBox(height: 50),
+                RegisterSignUpButton(),
+                SizedBox(height: 30),
+                AlreadyHaveAnAccount(),
+                SizedBox(height: 70),
+                RegisterOrContinueWith(),
+                SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FacebookIconButton(),
+                    SizedBox(width: 10),
+                    AppleIconButton(),
+                    SizedBox(width: 10),
+                    AdobeIconButton(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

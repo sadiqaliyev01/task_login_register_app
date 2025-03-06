@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AdobeIconButton extends StatelessWidget {
   const AdobeIconButton({super.key});
@@ -13,7 +14,10 @@ class AdobeIconButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Uri url = Uri.parse("https://www.adobe.com/");
+          launchUrl(url);
+        },
         icon: const Icon(
           Icons.adobe,
         ),

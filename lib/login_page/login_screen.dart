@@ -24,37 +24,39 @@ class _LoginScreenState extends State<LoginScreen> {
     return const SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Center(
-                child: LoginScreenTitle(),
-              ),
-              SizedBox(height: 70),
-              LoginScreenSubtitle(),
-              SizedBox(height: 70),
-              LoginEmailTextForm(),
-              SizedBox(height: 40),
-              LoginPasswordTextForm(),
-              SizedBox(height: 20),
-              ForgotYourPassword(),
-              SizedBox(height: 20),
-              LoginSignInButton(),
-              SizedBox(height: 20),
-              CreateNewAccount(),
-              SizedBox(height: 70),
-              LoginOrContinueWith(),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FacebookIconButton(),
-                  SizedBox(width: 10),
-                  AppleIconButton(),
-                  SizedBox(width: 10),
-                  AdobeIconButton(),
-                ],
-              ),
-            ],
+          child: Expanded(
+            child: Column(
+              children: [
+                Center(
+                  child: LoginScreenTitle(),
+                ),
+                SizedBox(height: 70),
+                LoginScreenSubtitle(),
+                SizedBox(height: 70),
+                LoginEmailTextForm(),
+                SizedBox(height: 40),
+                LoginPasswordTextForm(),
+                SizedBox(height: 20),
+                ForgotYourPassword(),
+                SizedBox(height: 20),
+                LoginSignInButton(),
+                SizedBox(height: 20),
+                CreateNewAccount(),
+                SizedBox(height: 70),
+                LoginOrContinueWith(),
+                SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FacebookIconButton(),
+                    SizedBox(width: 10),
+                    AppleIconButton(),
+                    SizedBox(width: 10),
+                    AdobeIconButton(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_login_register_app/constants/app_colors.dart';
+import 'package:task_login_register_app/login_page/login_screen.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({super.key});
@@ -10,7 +11,16 @@ class LoginButton extends StatelessWidget {
       height: 60,
       width: 160,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return const LoginScreen();
+              },
+            ),
+          );
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.appBlue,
           shape: RoundedRectangleBorder(

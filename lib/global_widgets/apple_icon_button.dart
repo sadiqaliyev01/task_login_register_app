@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AppleIconButton extends StatelessWidget {
   const AppleIconButton({super.key});
@@ -13,7 +14,10 @@ class AppleIconButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Uri url = Uri.parse("https://www.apple.com/");
+          launchUrl(url);
+        },
         icon:  const Icon(
           Icons.apple_outlined,
         ),

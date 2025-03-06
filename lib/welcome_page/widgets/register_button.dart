@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_login_register_app/constants/app_colors.dart';
+import 'package:task_login_register_app/register_page/register_screen.dart';
 
 class RegisterButton extends StatelessWidget {
   const RegisterButton({super.key});
@@ -10,7 +11,16 @@ class RegisterButton extends StatelessWidget {
       height: 60,
       width: 160,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return const RegisterScreen();
+              },
+            ),
+          );
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.white,
           shape: RoundedRectangleBorder(

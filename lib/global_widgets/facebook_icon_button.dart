@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FacebookIconButton extends StatelessWidget {
   const FacebookIconButton({super.key});
@@ -13,7 +14,10 @@ class FacebookIconButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Uri url = Uri.parse("https://www.facebook.com/");
+          launchUrl(url);
+          },
         icon: const Icon(
           Icons.facebook_outlined,
         ),
